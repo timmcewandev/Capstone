@@ -1,14 +1,14 @@
 //
-//  tKMemberView.swift
+//  ViewController.swift
 //  tK Fan
 //
-//  Created by sudo on 5/8/17.
+//  Created by sudo on 5/15/17.
 //  Copyright © 2017 sudo. All rights reserved.
 //
 
 import UIKit
 
-class tKMemberView: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
