@@ -5,7 +5,9 @@
 //  Created by sudo on 5/7/17.
 //  Copyright © 2017 sudo. All rights reserved.
 //
-
+import Fabric
+import Crashlytics
+import TwitterKit
 import UIKit
 
 @UIApplicationMain
@@ -16,8 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        Fabric.with([Twitter.self, Crashlytics.self])
+        // TODO: Move this to where you establish a user session
+
+
+
         return true
     }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
