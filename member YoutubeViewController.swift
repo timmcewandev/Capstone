@@ -1,35 +1,39 @@
 //
-//  member YoutubeViewController.swift
-//  tK Fan
+//  ViewController.swift
+//  downloadingWebContent
 //
-//  Created by sudo on 5/31/17.
-//  Copyright © 2017 sudo. All rights reserved.
+//  Created by BishopHill on 3/27/17.
+//  Copyright © 2017 Dumb Unicorn. All rights reserved.
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
-class member_YoutubeViewController: UIViewController {
+class memberYoutubeViewController: UIViewController {
+    var member = Members()
+    @IBOutlet var webView: UIWebView!
 
+
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        
+        var storage = self.member.youtube
+        
+        if (storage == "https://www.youtube.com/ /videos") {
+            storage = "https://www.youtube.com/TeamKaliber"
+        }else {
+        print("Its not empty")
+            
+        }
+        print(storage)
+        
+        webView.loadRequest(URLRequest(url: NSURL(string: storage)! as URL))
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
+
+

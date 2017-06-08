@@ -10,26 +10,35 @@ import UIKit
 
 class intoViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+    @IBOutlet weak var teamkalib: UntitledView!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+
+     self.teamkalib.addUntitledAnimation()
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let secondViewController = storyboard.instantiateViewController(withIdentifier: "HelloWorld") as UIViewController
+                self.present(secondViewController, animated: true, completion: nil)
+                
+                
+            })
+            
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
-    
+            }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}
+
+
+
+
