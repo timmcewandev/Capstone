@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B08D8811F0AAD6E0018D54F /* MembersAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B08D8801F0AAD6E0018D54F /* MembersAdd.swift */; };
+		9B08D8831F0AB3BA0018D54F /* FavsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B08D8821F0AB3BA0018D54F /* FavsTableViewController.swift */; };
 		9B0DFC231ECCE1E3001C8CFA /* TwitterMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0DFC221ECCE1E3001C8CFA /* TwitterMembers.swift */; };
 		9B1631121EC15BAF007756D6 /* members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1631111EC15BAF007756D6 /* members.swift */; };
 		9B2964031EBF88E400377E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2964021EBF88E400377E9B /* AppDelegate.swift */; };
-		9B29640A1EBF88E400377E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2964081EBF88E400377E9B /* Main.storyboard */; };
 		9B29640C1EBF88E400377E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B29640B1EBF88E400377E9B /* Assets.xcassets */; };
 		9B29640F1EBF88E400377E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B29640D1EBF88E400377E9B /* LaunchScreen.storyboard */; };
 		9B29641A1EBF88E400377E9B /* tK_FanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2964191EBF88E400377E9B /* tK_FanTests.swift */; };
@@ -27,7 +28,11 @@
 		9BAB606D1EDDE1FB004828D0 /* Untitled.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAB606B1EDDE1FB004828D0 /* Untitled.xcassets */; };
 		9BAB606E1EDDE1FB004828D0 /* UntitledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB606C1EDDE1FB004828D0 /* UntitledView.swift */; };
 		9BAB60701EDF265F004828D0 /* member YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB606F1EDF265F004828D0 /* member YoutubeViewController.swift */; };
+		9BABD9CE1F0E9406002CD649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2964081EBF88E400377E9B /* Main.storyboard */; };
 		9BB3E9F41ECB718700650D3E /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3E9F31ECB718700650D3E /* profileViewController.swift */; };
+		9BC4BC7A1F0E2DDF00666306 /* addbutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4BC791F0E2DDF00666306 /* addbutton.swift */; };
+		9BD4F7181F0D87C300A1AD45 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4F7171F0D87C300A1AD45 /* DataStore.swift */; };
+		9BEB98F71EEAFD0000CDBC00 /* aboutTkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB98F61EEAFD0000CDBC00 /* aboutTkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B08D8801F0AAD6E0018D54F /* MembersAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersAdd.swift; sourceTree = "<group>"; };
+		9B08D8821F0AB3BA0018D54F /* FavsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavsTableViewController.swift; sourceTree = "<group>"; };
 		9B0DFC221ECCE1E3001C8CFA /* TwitterMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterMembers.swift; sourceTree = "<group>"; };
 		9B1631111EC15BAF007756D6 /* members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = members.swift; sourceTree = "<group>"; };
 		9B2963FF1EBF88E400377E9B /* tK Fan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tK Fan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +83,9 @@
 		9BAB606C1EDDE1FB004828D0 /* UntitledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UntitledView.swift; sourceTree = SOURCE_ROOT; };
 		9BAB606F1EDF265F004828D0 /* member YoutubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "member YoutubeViewController.swift"; sourceTree = "<group>"; };
 		9BB3E9F31ECB718700650D3E /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		9BC4BC791F0E2DDF00666306 /* addbutton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addbutton.swift; sourceTree = "<group>"; };
+		9BD4F7171F0D87C300A1AD45 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		9BEB98F61EEAFD0000CDBC00 /* aboutTkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutTkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				9B1631111EC15BAF007756D6 /* members.swift */,
+				9B08D8801F0AAD6E0018D54F /* MembersAdd.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -180,6 +191,8 @@
 				9B29640B1EBF88E400377E9B /* Assets.xcassets */,
 				9B29640D1EBF88E400377E9B /* LaunchScreen.storyboard */,
 				9B2964101EBF88E400377E9B /* Info.plist */,
+				9BD4F7171F0D87C300A1AD45 /* DataStore.swift */,
+				9BC4BC791F0E2DDF00666306 /* addbutton.swift */,
 			);
 			name = "View + Assets";
 			path = ..;
@@ -188,6 +201,8 @@
 		9B29643C1EBF8A3A00377E9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9B08D8821F0AB3BA0018D54F /* FavsTableViewController.swift */,
+				9BEB98F61EEAFD0000CDBC00 /* aboutTkViewController.swift */,
 				9BAB60621EDDC24D004828D0 /* intoViewController.swift */,
 				9BAB606F1EDF265F004828D0 /* member YoutubeViewController.swift */,
 				9B3771271ECBEED000FA1686 /* twitterViewKit */,
@@ -337,9 +352,9 @@
 			files = (
 				9B2964391EBF897C00377E9B /* TwitterKitResources.bundle in Resources */,
 				9B29640F1EBF88E400377E9B /* LaunchScreen.storyboard in Resources */,
+				9BABD9CE1F0E9406002CD649 /* Main.storyboard in Resources */,
 				9BAB606D1EDDE1FB004828D0 /* Untitled.xcassets in Resources */,
 				9B29640C1EBF88E400377E9B /* Assets.xcassets in Resources */,
-				9B29640A1EBF88E400377E9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,12 +395,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEB98F71EEAFD0000CDBC00 /* aboutTkViewController.swift in Sources */,
 				9BA0CABC1ECA0CBE002ECCB8 /* rosterTableViewController.swift in Sources */,
 				9BAB60631EDDC24D004828D0 /* intoViewController.swift in Sources */,
+				9B08D8811F0AAD6E0018D54F /* MembersAdd.swift in Sources */,
 				9B1631121EC15BAF007756D6 /* members.swift in Sources */,
 				9BB3E9F41ECB718700650D3E /* profileViewController.swift in Sources */,
 				9B2964031EBF88E400377E9B /* AppDelegate.swift in Sources */,
+				9BD4F7181F0D87C300A1AD45 /* DataStore.swift in Sources */,
 				9BAB60701EDF265F004828D0 /* member YoutubeViewController.swift in Sources */,
+				9B08D8831F0AB3BA0018D54F /* FavsTableViewController.swift in Sources */,
+				9BC4BC7A1F0E2DDF00666306 /* addbutton.swift in Sources */,
 				9B2964401EBFCC7400377E9B /* creativetKTableViewController.swift in Sources */,
 				9BAB606E1EDDE1FB004828D0 /* UntitledView.swift in Sources */,
 				9B0DFC231ECCE1E3001C8CFA /* TwitterMembers.swift in Sources */,

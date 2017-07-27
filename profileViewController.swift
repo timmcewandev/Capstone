@@ -1,18 +1,19 @@
 //
-//  FifthViewController.swift
-//  tK Fan
-//
-//  Created by timmcewan on 11/18/16.
-//  Copyright © 2016 varakthelabel. All rights reserved.
-//
-//
-//  ThirdViewController.swift
-//  tK Fan
+
 //
 //  Created by timmcewan on 11/15/16.
 //  Copyright © 2016 breakthelabel. All rights reserved.
 //
 
+var filePath: String {
+    //creates a directory to where we are saving it
+    let manager = FileManager.default
+    //returns an array of urls from our documentDirectory and we take the first path
+    let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first
+    //    print("this is the url path in the documentDirectory \(url)")
+    //3 - creates a new path component and creates a new file called "Data" which is where we will store our Data array.
+    return (url!.appendingPathComponent("Data").path)
+}
 
 
 import UIKit
@@ -28,8 +29,9 @@ import TwitterKit
 class profileViewController: UIViewController  {
     @IBOutlet weak var containerView: UIView!
     weak var currentViewController: UIViewController?
-    
+    var store = DataStore.sharedInstnce
     var navigationBarAppearace = UINavigationBar.appearance()
+    
     
     
     
@@ -39,6 +41,7 @@ class profileViewController: UIViewController  {
     
     
     
+    @IBOutlet weak var popupNOW: UIView!
     
     @IBOutlet weak var job: UILabel!
     @IBOutlet weak var tweetView: UIView!
@@ -68,7 +71,6 @@ class profileViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.job.isHidden = self.member.job.contains("")
         self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
         self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
@@ -86,10 +88,10 @@ class profileViewController: UIViewController  {
         self.jobOUTLET.text = self.member.altPosition
         self.job.text = self.member.job
         if member.altName == " " {
-              self.NavTitle.topItem?.title = self.member.name
-        
+            self.NavTitle.topItem?.title = self.member.name
+            
         } else {
-      self.NavTitle.topItem?.title = self.member.altName
+            self.NavTitle.topItem?.title = self.member.altName
         }
         
         
@@ -122,6 +124,7 @@ class profileViewController: UIViewController  {
         //
         //        view.backgroundColor =
     }
+
     
     
     @IBAction func backButton(_ sender: UIBarButtonItem) {
@@ -141,7 +144,7 @@ class profileViewController: UIViewController  {
             
             self.addSubview(subView: twitterViewController.view, toView:self.containerView!)
             self.currentViewController = twitterViewController
-
+            
         } else {
             let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComponentB") as! memberYoutubeViewController
             newViewController.member = self.member
@@ -206,7 +209,7 @@ class profileViewController: UIViewController  {
         tKScaleXAnimation.duration = 4.786
         tKScaleXAnimation.values = [1.000, 1.000, 1.000, 0.900, 0.900, 0.800, 0.700, 0.700, 0.800, 0.900, 0.900, 0.900] as [Float]
         tKScaleXAnimation.keyTimes = [0.000, 0.429, 0.429, 0.429, 0.544, 0.544, 0.552, 0.799, 0.799, 0.847, 1.000, 1.000] as [NSNumber]
-      
+        
         tKScaleXAnimation.timingFunctions = [instantTiming, instantTiming, linearTiming, instantTiming, instantTiming, linearTiming, instantTiming, instantTiming, linearTiming, instantTiming, instantTiming]
         viewToAnimate.layer.add(tKScaleXAnimation, forKey:"Untitled Animation_ScaleX")
         
@@ -225,11 +228,48 @@ class profileViewController: UIViewController  {
         tKOpacityAnimation.timingFunctions = [instantTiming, instantTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, linearTiming, instantTiming, instantTiming]
         viewToAnimate.layer.add(tKOpacityAnimation, forKey:"Untitled Animation_Opacity")
     }
+    
+    
+    
+    func addUntitledAnimationAnimationToViewView(viewToAnimate: UIView) {
+        let linearTiming = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        let reunitedMaskScaleXAnimation = CAKeyframeAnimation(keyPath: "transform.scale.x")
+        reunitedMaskScaleXAnimation.duration = 0.300
+        reunitedMaskScaleXAnimation.values = [0.078, 3.080] as [Float]
+        reunitedMaskScaleXAnimation.keyTimes = [0.000, 1.000] as [NSNumber]
+        reunitedMaskScaleXAnimation.timingFunctions = [linearTiming]
+        viewToAnimate.layer.add(reunitedMaskScaleXAnimation, forKey:"Untitled Animation_ScaleX")
+        
+        let reunitedMaskScaleYAnimation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+        reunitedMaskScaleYAnimation.duration = 0.300
+        reunitedMaskScaleYAnimation.values = [0.029, 1.172] as [Float]
+        reunitedMaskScaleYAnimation.keyTimes = [0.000, 1.000] as [NSNumber]
+        reunitedMaskScaleYAnimation.timingFunctions = [linearTiming]
+        viewToAnimate.layer.add(reunitedMaskScaleYAnimation, forKey:"Untitled Animation_ScaleY")
+        
+        let reunitedMaskTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        reunitedMaskTranslationXAnimation.duration = 0.300
+        reunitedMaskTranslationXAnimation.values = [0.000, 0.000] as [Float]
+        reunitedMaskTranslationXAnimation.keyTimes = [0.000, 1.000] as [NSNumber]
+        reunitedMaskTranslationXAnimation.timingFunctions = [linearTiming]
+        viewToAnimate.layer.add(reunitedMaskTranslationXAnimation, forKey:"Untitled Animation_TranslationX")
+        
+        let reunitedMaskTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        reunitedMaskTranslationYAnimation.duration = 0.300
+        reunitedMaskTranslationYAnimation.values = [0.000, 0.000] as [Float]
+        reunitedMaskTranslationYAnimation.keyTimes = [0.000, 1.000] as [NSNumber]
+        reunitedMaskTranslationYAnimation.timingFunctions = [linearTiming]
+        reunitedMaskTranslationYAnimation.repeatCount = HUGE
+        viewToAnimate.layer.add(reunitedMaskTranslationYAnimation, forKey:"Untitled Animation_TranslationY")
+    }
+    
+    
     // MARK: - end of animation
     
     @IBAction func snapchatbutton(_ sender: Any) {
         Answers.logContentView(withName: "SnapChat Action", contentType: "\(member.name): \(member.snapchat)", contentId: "\(member.name)", customAttributes: ["Favorites Count":20, "Screen Orientation":"Landscape"])
-                    addUntitledAnimationAnimationToView(viewToAnimate: sender as! UIView)
+        addUntitledAnimationAnimationToView(viewToAnimate: sender as! UIView)
         let url2 = NSURL(string: self.member.snapchatapp)!
         let url = NSURL(string: self.member.snapchat)!
         if UIApplication.shared.canOpenURL(url2 as URL){
@@ -280,13 +320,13 @@ class profileViewController: UIViewController  {
         if UIApplication.shared.canOpenURL(instagrammer as URL){
             
         }
-                //            IF THE TOP FAILS IT GOES TO THE BOTTOMS AND OPENS IN APP
-                UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
-                print("HELLO")
-                //redirect to safari because the user doesn't have Twitter
-                UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
+        //            IF THE TOP FAILS IT GOES TO THE BOTTOMS AND OPENS IN APP
+        UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
+        print("HELLO")
+        //redirect to safari because the user doesn't have Twitter
+        UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
         
-            }
+    }
     
     
     
@@ -307,10 +347,60 @@ class profileViewController: UIViewController  {
         UIApplication.shared.open(url2 as URL, options: [:], completionHandler: nil)
     }
     
+    
+    
+    @IBAction func addToFavs(_ sender: UIBarButtonItem) {
+        
+        
+        let unwrappedText = member.name
+        let newShoppingListItem = MemberAdd(name: unwrappedText)
+        self.saveData(item: newShoppingListItem)
+
+        
+        //                / the alert view
+        let alert = UIAlertController(title: "\(member.name)", message: "has been added into favs 👍", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        // change seconds if needed
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+            // your code with delay
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    public func saveData(item: MemberAdd) {
+        self.store.memberAdd.append(item)
+        
+        
+        NSKeyedArchiver.archiveRootObject(self.store.memberAdd, toFile: filePath)
+    }
+    
+    
+    
+    public func loadData() {
+        
+        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [MemberAdd] {
+            self.store.memberAdd = ourData
+        }
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
 }
 
 

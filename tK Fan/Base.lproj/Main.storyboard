@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W9g-ZB-jg3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W9g-ZB-jg3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,23 +10,153 @@
     </dependencies>
     <scenes>
         <!--Favs-->
-        <scene sceneID="clS-Q9-z7b">
+        <scene sceneID="QPs-AU-seI">
             <objects>
-                <viewController id="e9j-L6-oYi" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QuP-RZ-nxK"/>
-                        <viewControllerLayoutGuide type="bottom" id="ud6-2l-Xsr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n0I-Ih-m4R">
+                <tableViewController storyboardIdentifier="ComponentC" id="2AZ-ff-ipR" customClass="FavsTableViewController" customModule="tK_Fan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="upt-qb-Kgi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Favs" image="hearticon" id="JgQ-c5-hnJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mom-FE-lKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9Am-od-6j1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Am-od-6j1" id="liR-iX-rMe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2AZ-ff-ipR" id="ipX-8l-bHM"/>
+                            <outlet property="delegate" destination="2AZ-ff-ipR" id="puk-Ll-Eby"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favs" id="TyM-UV-40b"/>
+                    <connections>
+                        <segue destination="ffP-vT-iac" kind="modal" identifier="MembersSegue" id="vh5-Gc-Mt5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-cL-6ND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-896" y="-797"/>
+            <point key="canvasLocation" x="720" y="-805"/>
+        </scene>
+        <!--About tK-->
+        <scene sceneID="vgb-Lz-ytI">
+            <objects>
+                <viewController id="e2a-jO-lQr" customClass="aboutTkViewController" customModule="tK_Fan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oFJ-Cm-Nw5"/>
+                        <viewControllerLayoutGuide type="bottom" id="wco-PD-oCu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LLZ-ys-TEd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-MG-xpe">
+                                <rect key="frame" x="0.0" y="20" width="414" height="370"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FeW-7y-P8v">
+                                        <rect key="frame" x="152" y="0.0" width="110" height="30.333333333333336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT US" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-zi-6Dh">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="30.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-Ar-ZvZ">
+                                        <rect key="frame" x="0.33333333333334281" y="43.333333333333343" width="413.33333333333337" height="142.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-is-PXG">
+                                                <rect key="frame" x="0.0" y="0.0" width="413.33333333333337" height="142.33333333333331"/>
+                                                <string key="text">Team Kaliber was founded in 2013 by several members of the Call of Duty community. From the quickly growing competitive scene to absolutely massive social community, Team Kaliber's backbone is built by key members from each side of the spectrum.
+
+ Establishing ourselves early on within the competitive Call of Duty community. Team Kaliber has secured a top notoriety in Call of Duty eSports. We look to expand into other eSports in the near future. </string>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-42-U6c">
+                                        <rect key="frame" x="147.33333333333337" y="198.66666666666663" width="119.66666666666663" height="30.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPONSORS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-1D-8uS">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.66666666666666" height="30.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="center" spacing="28" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-tj-eLT">
+                                        <rect key="frame" x="84" y="242" width="246" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRC-oh-vG5">
+                                                <rect key="frame" x="0.0" y="2" width="118" height="25"/>
+                                                <state key="normal" image="fourth Sponsor"/>
+                                                <connections>
+                                                    <action selector="GFUELbtn:" destination="e2a-jO-lQr" eventType="touchUpInside" id="LXq-Xo-dOO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRd-wW-ytS">
+                                                <rect key="frame" x="146" y="0.0" width="100" height="29"/>
+                                                <state key="normal" image="SecondSponsor"/>
+                                                <connections>
+                                                    <action selector="scuffBTN:" destination="e2a-jO-lQr" eventType="touchUpInside" id="ZgY-K5-9aD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMc-dT-EOp">
+                                        <rect key="frame" x="80" y="284" width="254" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-Yx-IGI">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="30"/>
+                                                <state key="normal" image="third Sponsor"/>
+                                                <connections>
+                                                    <action selector="KontrolBTN:" destination="e2a-jO-lQr" eventType="touchUpInside" id="Ckg-a8-Q1x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0km-4O-90z">
+                                                <rect key="frame" x="127" y="2.6666666666666856" width="127" height="25"/>
+                                                <state key="normal" image="FirstSponsor"/>
+                                                <connections>
+                                                    <action selector="audioBTN:" destination="e2a-jO-lQr" eventType="touchUpInside" id="S2e-OD-4fb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-vU-avL">
+                                        <rect key="frame" x="139" y="327" width="136" height="43"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hG-DV-8sM">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="43"/>
+                                                <state key="normal" image="StoreBTN"/>
+                                                <connections>
+                                                    <action selector="storeBTN:" destination="e2a-jO-lQr" eventType="touchUpInside" id="aUg-4t-ih4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19566559789999999" green="0.2471371889" blue="0.33385455609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qXe-MG-xpe" firstAttribute="leading" secondItem="LLZ-ys-TEd" secondAttribute="leading" id="2lw-PL-Pqg"/>
+                            <constraint firstAttribute="trailing" secondItem="qXe-MG-xpe" secondAttribute="trailing" id="XVD-v2-XQQ"/>
+                            <constraint firstItem="qXe-MG-xpe" firstAttribute="top" secondItem="oFJ-Cm-Nw5" secondAttribute="bottom" id="aDi-vD-Bsh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About tK" image="tK lilicon" selectedImage="tK lilicon" id="6VG-6i-YfR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rt-kH-JUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="624"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -39,15 +169,16 @@
                         <color key="selectedImageTintColor" red="0.19620779156684875" green="0.24608328938484192" blue="0.33311760425567627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8QJ-D9-uab" kind="relationship" relationship="viewControllers" id="PBQ-pq-oc4"/>
                         <segue destination="opU-Du-gjW" kind="relationship" relationship="viewControllers" id="p9u-4o-yv1"/>
+                        <segue destination="8QJ-D9-uab" kind="relationship" relationship="viewControllers" id="PBQ-pq-oc4"/>
                         <segue destination="Vpn-Sm-s7h" kind="relationship" relationship="viewControllers" id="uXB-rS-99x"/>
-                        <segue destination="e9j-L6-oYi" kind="relationship" relationship="viewControllers" id="XkJ-hK-8a2"/>
+                        <segue destination="e2a-jO-lQr" kind="relationship" relationship="viewControllers" id="pfI-gu-vpw"/>
+                        <segue destination="PWf-yV-k7P" kind="relationship" relationship="viewControllers" id="wr4-ie-YRH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="-127"/>
+            <point key="canvasLocation" x="-967" y="-127"/>
         </scene>
         <!--Roster-->
         <scene sceneID="WgY-kG-C06">
@@ -118,6 +249,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdg-Wt-sLh" customClass="UntitledAddedtoIt" customModule="tK_Fan" customModuleProvider="target">
+                                <rect key="frame" x="43" y="300" width="327" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="je8-ff-9WL">
                                 <rect key="frame" x="0.0" y="20" width="414" height="667"/>
                             </imageView>
@@ -147,6 +283,9 @@
                                                         </barButtonItem>
                                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RRO-R9-pYk">
                                                             <color key="tintColor" red="0.1084153429" green="0.13347619769999999" blue="0.18666273359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="addToFavs:" destination="ffP-vT-iac" id="uAg-r7-SrR"/>
+                                                            </connections>
                                                         </barButtonItem>
                                                     </navigationItem>
                                                 </items>
@@ -282,6 +421,7 @@
                         <outlet property="instagram" destination="waL-km-36a" id="qQK-f8-VL7"/>
                         <outlet property="job" destination="1Xg-6b-OHV" id="Rh7-fN-gZE"/>
                         <outlet property="jobOUTLET" destination="D1O-ti-EBz" id="BKz-me-j29"/>
+                        <outlet property="popupNOW" destination="Hdg-Wt-sLh" id="aqx-jT-MSc"/>
                         <outlet property="profilepicture" destination="qWD-0v-g3M" id="FQa-Ny-EqV"/>
                         <outlet property="segmentedControl" destination="wUE-hN-XwH" id="Z1U-2E-KuG"/>
                         <outlet property="snapchat" destination="WFk-Yb-br6" id="Tyl-Vi-UOg"/>
@@ -326,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPN-ap-dMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623.1884057971015" y="-803.804347826087"/>
+            <point key="canvasLocation" x="1530.4347826086957" y="-803.804347826087"/>
         </scene>
         <!--tK Twitter-->
         <scene sceneID="Onl-N9-HnX">
@@ -450,17 +590,45 @@
             </objects>
             <point key="canvasLocation" x="1692.753623188406" y="960.73369565217399"/>
         </scene>
+        <!--Favs-->
+        <scene sceneID="LtR-h5-gIL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PWf-yV-k7P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favs" image="heart-outline" selectedImage="heart-outline" id="etg-9m-oP7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KQX-eU-q4U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2AZ-ff-ipR" kind="relationship" relationship="rootViewController" id="FgO-LQ-64i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ii5-zs-DyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-804"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="FirstSponsor" width="109" height="25"/>
         <image name="Instagram" width="38" height="38"/>
+        <image name="SecondSponsor" width="100" height="29"/>
+        <image name="StoreBTN" width="136" height="43"/>
+        <image name="fourth Sponsor" width="118" height="25"/>
         <image name="goneProfile" width="146" height="146"/>
-        <image name="hearticon" width="30" height="28"/>
+        <image name="heart-outline" width="30" height="28"/>
         <image name="images-1" width="275" height="183"/>
         <image name="roster lilicon" width="24" height="31"/>
         <image name="snapchat" width="46" height="42"/>
+        <image name="tK lilicon" width="38" height="23"/>
+        <image name="third Sponsor" width="127" height="30"/>
         <image name="twitch" width="45" height="47"/>
         <image name="twitter" width="46" height="38"/>
         <image name="twitterlilicon" width="31" height="25"/>
         <image name="youtube" width="40" height="46"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EgP-6d-U5a"/>
+    </inferredMetricsTieBreakers>
 </document>
