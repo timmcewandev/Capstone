@@ -417,6 +417,7 @@
                     <navigationItem key="navigationItem" id="qqs-9v-Yy3"/>
                     <connections>
                         <outlet property="NavTitle" destination="gWe-lu-pva" id="YRM-OY-9D3"/>
+                        <outlet property="PlusSignature" destination="RRO-R9-pYk" id="igG-GQ-nux"/>
                         <outlet property="containerView" destination="fDa-kq-rCP" id="wVc-Hg-YdF"/>
                         <outlet property="instagram" destination="waL-km-36a" id="qQK-f8-VL7"/>
                         <outlet property="job" destination="1Xg-6b-OHV" id="Rh7-fN-gZE"/>
