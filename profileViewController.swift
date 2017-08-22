@@ -23,7 +23,7 @@ import Crashlytics
 import TwitterKit
 
 
-
+//Tests
 
 
 class profileViewController: UIViewController  {
@@ -32,6 +32,7 @@ class profileViewController: UIViewController  {
     var store = DataStore.sharedInstnce
     var navigationBarAppearace = UINavigationBar.appearance()
     
+    @IBOutlet weak var PlusSignature: UIBarButtonItem!
     
     
     
@@ -71,6 +72,34 @@ class profileViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        public func saveData(item: MemberAdd) {
+//            self.store.memberAdd.append(item)
+//            
+//            
+//            NSKeyedArchiver.archiveRootObject(self.store.memberAdd, toFile: filePath)
+//        }
+//        
+//        
+//        
+//        public func loadData() {
+//            
+//            if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [MemberAdd] {
+//                self.store.memberAdd = ourData
+//            }
+//        }
+//        print("This is the store\(store.memberAdd)")
+       
+        //        PlusSignature.isEnabled = false
+//        } else {
+//        PlusSignature.isEnabled = true
+//        }
+
+        
+//        if  {
+//        
+//        }
+
+    
         self.job.isHidden = self.member.job.contains("")
         self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
         self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
@@ -93,6 +122,9 @@ class profileViewController: UIViewController  {
         } else {
             self.NavTitle.topItem?.title = self.member.altName
         }
+        
+        
+
         
         
         
@@ -124,6 +156,9 @@ class profileViewController: UIViewController  {
         //
         //        view.backgroundColor =
     }
+    
+    
+
 
     
     
