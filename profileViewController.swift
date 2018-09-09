@@ -256,14 +256,15 @@ class profileViewController: UIViewController  {
   
   @IBAction func instagramme(_ sender: Any) {
     
-    Answers.logContentView(withName: "Instagram Action", contentType: "\(member.name): \(member.instagram)", contentId: "\(member.name)", customAttributes: ["Favorites Count":20, "Screen Orientation":"Landscape"])
     addUntitledAnimationAnimationToView(viewToAnimate: sender as! UIView)
-    _ = NSURL(string: self.member.instagram)!
-    let instagrammer = NSURL(string: self.member.instagramapp)!
-    if UIApplication.shared.canOpenURL(instagrammer as URL){
+    Answers.logContentView(withName: "Twitter Action", contentType: "\(member.name): \(member.twitter)", contentId: "\(member.name)", customAttributes: ["Favorites Count":20, "Screen Orientation":"Landscape"])
+    let url2 = NSURL(string: self.member.instagram)!
+    let url = NSURL(string: self.member.instagramapp)!
+    if UIApplication.shared.canOpenURL(url2 as URL){
     }
-    UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
-    UIApplication.shared.open(instagrammer as URL, options: [:], completionHandler: nil)
+    UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    UIApplication.shared.open(url2 as URL, options: [:], completionHandler: nil)
+    
   }
   
   @IBAction func twitternow(_ sender: Any) {
