@@ -1,8 +1,6 @@
 //
 //  ViewController.swift
 //  downloadingWebContent
-//
-//  Created by BishopHill on 3/27/17.
 //  Copyright © 2017 Dumb Unicorn. All rights reserved.
 //
 

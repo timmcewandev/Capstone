@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  tK Fan
 //
-//  Created by sudo on 5/7/17.
-//  Copyright © 2017 sudo. All rights reserved.
-//
 import Fabric
 import Crashlytics
 import TwitterKit

@@ -2,9 +2,6 @@
 //  MembersAdd.swift
 //  tK Fan
 //
-//  Created by sudo on 7/3/17.
-//  Copyright © 2017 sudo. All rights reserved.
-//
 import Foundation
 //1 - Adopt the NSObject and NSCoding protocols
 class MemberAdd: NSObject, NSCoding {

@@ -1,7 +1,6 @@
 //
 //  ViewController.swift
 //  tK Fan
-//  Copyright © 2017 sudo. All rights reserved.
 //
 import Foundation
 import UIKit
