@@ -1,8 +1,6 @@
 //
 //  ViewController.swift
 //  tK Fan
-//
-//  Created by sudo on 5/15/17.
 //  Copyright © 2017 sudo. All rights reserved.
 //
 import Foundation
@@ -78,18 +76,12 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         crazyteddy.frontimage = UIImage(named: "Teddy")!
         Directors.append(crazyteddy)
         members.append(crazyteddy)
-        
-        
+      
         let fooya = Members(name: "fooya tK", twitterNickname: "iFooYa", altName: "Fooya", altPosition: "STREAMER/YOUTUBER", job: "Streamer", twitter: "iFooYa", twitterapp: "iFooYa", twitch: "fooya", twitchapp: "fooya", instagram: "FOOYA", instagramapp: "FOOYA", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: " ", youtubeapp: " ")
         fooya.frontimage = UIImage(named: "Fooya")!
-        
         Directors.append(fooya)
         Streamers.append(fooya)
         members.append(fooya)
-        //        let bealight = Members(name: "bealight tK", twitterNickname: "B3Alight_tK", altName: "Bealight", altPosition: "#1 Supporter", job: "#1 Supporter", twitter: "B3Alight_tK", twitterapp: "B3Alight_tK", twitch: "bealight", twitchapp: "bealight", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "mattstrite", youtubeINTRO: "UBQSJC09Ydc", youtubeapp: "mattstrite")
-        //        //        bealight.frontimage = UIImage(named: "beLightFront")!
-        //        Directors.append(bealight)
-        //        members.append(bealight)
         
         let laggin = Members(name: "laggin tK", twitterNickname: "Laggin24x", altName: "Laggin", altPosition: "GAMING NEWS", job: "", twitter: "Laggin24x", twitterapp: "Laggin24x", twitch: "aggin24x", twitchapp: "aggin24x", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "laggin24x", youtubeINTRO: "2HTYnWci3gE", youtubeapp: "laggin24x")
         laggin.frontimage = UIImage(named: "Laggin")!
@@ -137,13 +129,7 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         joshtk.frontimage = UIImage(named: "JoshTK")!
         members.append(joshtk)
         creatives.append(joshtk)
-        
-//        let behr = Members(name: "behr tK", twitterNickname: "DubaloDesign", altName: "Josh tK", altPosition: "Designer", job: "Graphic Designer", twitter: "BehrDesign", twitterapp: "BehrDesign", twitch: "behrco", twitchapp: "behrco", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "behrdesign", youtubeINTRO: "yRWMnMwU39Q", youtubeapp: "behrdesign")
-//        behr.frontimage = UIImage(named: "Behr")!
-//        members.append(behr)
-//        creatives.append(behr)
-        
-        
+
         let legenda = Members(name: "legenda tK", twitterNickname: "Legenda_tK", altName: "Legenda", altPosition: "Designer",  job: "Co-Lead Designer", twitter: "Legenda_tK", twitterapp: "Legenda_tK", twitch: "legenda_tk", twitchapp: "legenda_tk", instagram: " ", instagramapp: " ", snapchat:  " ", snapchatapp: " ", youtube: "legendarylegendaroyal", youtubeINTRO: " ", youtubeapp: "legendarylegendaroyal")
         legenda.frontimage = UIImage(named: "Legenda")!
         members.append(legenda)
@@ -266,40 +252,21 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         case 4:
             codList()
             cell.textLabel?.text = COD[indexPath.row].name
-            
-            
-            
-            
         default:
             break
-            //        break;
-            //        case 2:{
-            //            num_rows = [Tvaroslovie count];
-            //        }
-            //        break;
-            //        case 3:{
-            //            num_rows = [Skladba count];
-            //        }
-            //        break;
-            //        case 4:{
-            //            num_rows = [Sloh count];
-            //            }
         }
-        
-        
-        
         return cell
     }
     
     // END OF ROWS
     // SECTIONS
     public func numberOfSections(in tableView: UITableView) -> Int{
+      
         return sections.count
     }
-    
-    
-    
+
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+      
         return sections[section]
     }
     
@@ -343,23 +310,15 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
             break
             
         }
-        
-        
-        
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let ControlME2 = segue.destination as! profileViewController
         ControlME2.member = sender as! Members
-        
-        
-        
-        
+
     }
-    
-    
+
     override var prefersStatusBarHidden: Bool {
         return true
     }
