@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '44384A8AC3B556AB589F52D48637BF83'
+               BlueprintIdentifier = '8063472456E65B99D93DDA07DBC941DB'
                BlueprintName = 'Pods-tK Fan'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-tK Fan.framework'>

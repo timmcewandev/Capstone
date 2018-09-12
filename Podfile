@@ -5,6 +5,7 @@ target 'tK Fan' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'ReachabilitySwift'
+  pod 'RealmSwift'
   # Pods for tK Fan
 
 end
