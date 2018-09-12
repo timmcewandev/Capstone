@@ -20,6 +20,7 @@
 		9B29643A1EBF897C00377E9B /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2964361EBF897C00377E9B /* TwitterCore.framework */; };
 		9B29643E1EBF8AAD00377E9B /* tKTwitterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29643D1EBF8AAD00377E9B /* tKTwitterTableViewController.swift */; };
 		9B2964401EBFCC7400377E9B /* creativetKTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B29643F1EBFCC7400377E9B /* creativetKTableViewController.swift */; };
+		9B579FE52149C1DF00EB6CF7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B579FE42149C1DF00EB6CF7 /* Data.swift */; };
 		9BA0CAB81ECA009D002ECCB8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA0CAB71ECA009D002ECCB8 /* Crashlytics.framework */; };
 		9BA0CABC1ECA0CBE002ECCB8 /* rosterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0CABB1ECA0CBE002ECCB8 /* rosterTableViewController.swift */; };
 		9BAB60701EDF265F004828D0 /* member YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB606F1EDF265F004828D0 /* member YoutubeViewController.swift */; };
@@ -48,6 +49,7 @@
 		9B2964361EBF897C00377E9B /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		9B29643D1EBF8AAD00377E9B /* tKTwitterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tKTwitterTableViewController.swift; sourceTree = "<group>"; };
 		9B29643F1EBFCC7400377E9B /* creativetKTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = creativetKTableViewController.swift; sourceTree = "<group>"; };
+		9B579FE42149C1DF00EB6CF7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9BA0CAB51EC9FE15002ECCB8 /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Answers.framework; sourceTree = "<group>"; };
 		9BA0CAB71ECA009D002ECCB8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9BA0CABB1ECA0CBE002ECCB8 /* rosterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rosterTableViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				9B1631111EC15BAF007756D6 /* members.swift */,
 				9B08D8801F0AAD6E0018D54F /* MembersAdd.swift */,
+				9B579FE42149C1DF00EB6CF7 /* Data.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -338,6 +341,7 @@
 				9BD4F7181F0D87C300A1AD45 /* DataStore.swift in Sources */,
 				9BAB60701EDF265F004828D0 /* member YoutubeViewController.swift in Sources */,
 				9B08D8831F0AB3BA0018D54F /* FavsTableViewController.swift in Sources */,
+				9B579FE52149C1DF00EB6CF7 /* Data.swift in Sources */,
 				9BC4BC7A1F0E2DDF00666306 /* addbutton.swift in Sources */,
 				9B2964401EBFCC7400377E9B /* creativetKTableViewController.swift in Sources */,
 				9B0DFC231ECCE1E3001C8CFA /* TwitterMembers.swift in Sources */,

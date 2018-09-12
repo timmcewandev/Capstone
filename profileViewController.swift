@@ -16,6 +16,7 @@ import Foundation
 import MediaPlayer
 import Crashlytics
 import TwitterKit
+import RealmSwift
 
 class profileViewController: UIViewController  {
   @IBOutlet weak var containerView: UIView!
@@ -282,6 +283,16 @@ class profileViewController: UIViewController  {
   @IBAction func addToFavs(_ sender: UIBarButtonItem) {
     
     let unwrappedText = member.name
+    let data = Data()
+    data.name = unwrappedText
+    do {
+      let realm = try Realm()
+      try realm.write {
+        realm.add(data)
+      }
+    } catch {
+      print("Error in initializing new realm \(error)")
+    }
     let newShoppingListItem = MemberAdd(name: unwrappedText)
     self.saveData(item: newShoppingListItem)
     let alert = UIAlertController(title: "\(member.name)", message: "has been added into favs 👍", preferredStyle: .alert)
