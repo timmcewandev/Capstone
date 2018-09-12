@@ -27,9 +27,11 @@
 		9BB3E9F41ECB718700650D3E /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3E9F31ECB718700650D3E /* profileViewController.swift */; };
 		9BC4BC7A1F0E2DDF00666306 /* addbutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4BC791F0E2DDF00666306 /* addbutton.swift */; };
 		9BD4F7181F0D87C300A1AD45 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4F7171F0D87C300A1AD45 /* DataStore.swift */; };
+		C75DAC772571B6E65433EECF /* Pods_tK_Fan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECD59E06D93B2112AF2D39D /* Pods_tK_Fan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ECD59E06D93B2112AF2D39D /* Pods_tK_Fan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tK_Fan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B08D8801F0AAD6E0018D54F /* MembersAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersAdd.swift; sourceTree = "<group>"; };
 		9B08D8821F0AB3BA0018D54F /* FavsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavsTableViewController.swift; sourceTree = "<group>"; };
 		9B0DFC221ECCE1E3001C8CFA /* TwitterMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterMembers.swift; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		9BB3E9F31ECB718700650D3E /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9BC4BC791F0E2DDF00666306 /* addbutton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addbutton.swift; sourceTree = "<group>"; };
 		9BD4F7171F0D87C300A1AD45 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		E4DC8AF0FF3BB6EC3C43AB33 /* Pods-tK Fan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tK Fan.release.xcconfig"; path = "Pods/Target Support Files/Pods-tK Fan/Pods-tK Fan.release.xcconfig"; sourceTree = "<group>"; };
+		EE3CF17B969B6F8B9168B661 /* Pods-tK Fan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tK Fan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tK Fan/Pods-tK Fan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,30 @@
 				9B29643A1EBF897C00377E9B /* TwitterCore.framework in Frameworks */,
 				9BA0CAB81ECA009D002ECCB8 /* Crashlytics.framework in Frameworks */,
 				9B2964381EBF897C00377E9B /* TwitterKit.framework in Frameworks */,
+				C75DAC772571B6E65433EECF /* Pods_tK_Fan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44F2DEFA8EDD2FB2055B9091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ECD59E06D93B2112AF2D39D /* Pods_tK_Fan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6414398EAA2C3B173F2FA673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE3CF17B969B6F8B9168B661 /* Pods-tK Fan.debug.xcconfig */,
+				E4DC8AF0FF3BB6EC3C43AB33 /* Pods-tK Fan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9B1631101EC157F2007756D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +113,8 @@
 				9B2964351EBF897C00377E9B /* TwitterKitResources.bundle */,
 				9B2964361EBF897C00377E9B /* TwitterCore.framework */,
 				9B2964001EBF88E400377E9B /* Products */,
+				6414398EAA2C3B173F2FA673 /* Pods */,
+				44F2DEFA8EDD2FB2055B9091 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,10 +197,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B2964291EBF88E400377E9B /* Build configuration list for PBXNativeTarget "tK Fan" */;
 			buildPhases = (
+				4EBC20E94E799C97F785889D /* [CP] Check Pods Manifest.lock */,
 				9B2963FB1EBF88E400377E9B /* Sources */,
 				9B2963FC1EBF88E400377E9B /* Frameworks */,
 				9B2963FD1EBF88E400377E9B /* Resources */,
 				9B2964321EBF896300377E9B /* ShellScript */,
+				BB30E69F7829FA537B733EF4 /* [CP] Embed Pods Frameworks */,
+				9F550AB6208710D255298887 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +265,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4EBC20E94E799C97F785889D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9B2964321EBF896300377E9B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +292,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 136948a4ee351b7430e8738bcaf5b830e70ff295 774c26d62793f8d09417c8fc76b0084435b59e2444e0ba697ecadbb32c4d8f0e";
+		};
+		9F550AB6208710D255298887 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tK Fan/Pods-tK Fan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB30E69F7829FA537B733EF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tK Fan/Pods-tK Fan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -408,6 +480,7 @@
 		};
 		9B29642A1EBF88E400377E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE3CF17B969B6F8B9168B661 /* Pods-tK Fan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -429,6 +502,7 @@
 		};
 		9B29642B1EBF88E400377E9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4DC8AF0FF3BB6EC3C43AB33 /* Pods-tK Fan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A9UMG393DW;
