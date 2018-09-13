@@ -17,23 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
       //creating a realm
-      let data = Data()
-      data.name = "Tim"
-
       do {
       let realm = try Realm()
         try realm.write {
-          realm.add(data)
         }
       } catch {
         print("Error in initializing new realm \(error)")
       }
-      
-   
-      
       //create and commit
-      
-      
         Fabric.with([Twitter.self, Crashlytics.self])
         self.logUser()
         return true
