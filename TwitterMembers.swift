@@ -2,7 +2,7 @@ import UIKit
 import TwitterKit
 import Fabric
 import Crashlytics
-
+import Reachability
 
 class TwitterMembers: TWTRTimelineViewController  {
      var member = Members()
@@ -24,4 +24,23 @@ let client = TWTRAPIClient()
     override var prefersStatusBarHidden: Bool {
         return true
     }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    
+    let reachability = Reachability()!
+    reachability.whenUnreachable = { _ in
+      let alert = UIAlertController(title: "😭", message: "Don't hate us because your internet doesn't work -- Please reconnect device to internet ", preferredStyle: .alert)
+      self.present(alert, animated: true, completion: nil)
+      let when = DispatchTime.now() + 2
+      DispatchQueue.main.asyncAfter(deadline: when){
+        alert.dismiss(animated: true, completion: nil)
+      }
+    }
+    do {
+      try reachability.startNotifier()
+    } catch {
+      print("Unable to start notifier")
+    }
+    
+  }
 }

@@ -4,7 +4,7 @@ import UIKit
 import TwitterKit
 import Reachability
 
-class tkTwitterViewController: TWTRTimelineViewController  {
+class TkTwitterViewController: TWTRTimelineViewController  {
 
     var member = Members()
     override func viewDidLoad() {

@@ -17,6 +17,7 @@ import MediaPlayer
 import Crashlytics
 import TwitterKit
 import RealmSwift
+import Reachability
 
 class profileViewController: UIViewController  {
   @IBOutlet weak var containerView: UIView!
@@ -25,6 +26,8 @@ class profileViewController: UIViewController  {
   var navigationBarAppearace = UINavigationBar.appearance()
   @IBOutlet weak var PlusSignature: UIBarButtonItem!
   var member = Members()
+  
+  @IBOutlet weak var labelOUT: UILabel!
   @IBOutlet weak var popupNOW: UIView!
   @IBOutlet weak var job: UILabel!
   @IBOutlet weak var tweetView: UIView!
@@ -49,7 +52,7 @@ class profileViewController: UIViewController  {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    labelOUT.isHidden = true
     self.job.isHidden = self.member.job.contains("")
     self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
     self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
@@ -78,6 +81,30 @@ class profileViewController: UIViewController  {
     self.addChildViewController(twitterViewController)
     self.addSubview(subView: twitterViewController.view, toView:self.containerView!)
     self.currentViewController = twitterViewController
+  }
+  
+  fileprivate func internetIsNotReachable() {
+    let reachability = Reachability()!
+    reachability.whenUnreachable = { _ in
+      let alert = UIAlertController(title: "😭", message: "Don't hate us because your internet doesn't work -- Please reconnect device to internet ", preferredStyle: .alert)
+      self.present(alert, animated: true, completion: nil)
+      let when = DispatchTime.now() + 2
+      DispatchQueue.main.asyncAfter(deadline: when){
+        alert.dismiss(animated: true, completion: nil)
+      }
+    }
+    do {
+      try reachability.startNotifier()
+    } catch {
+      print("Unable to start notifier")
+    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    
+    internetIsNotReachable()
+    
   }
   
   @IBAction func backButton(_ sender: UIBarButtonItem) {
