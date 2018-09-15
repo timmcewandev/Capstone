@@ -52,7 +52,7 @@ class profileViewController: UIViewController  {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    labelOUT.isHidden = true
+
     self.job.isHidden = self.member.job.contains("")
     self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
     self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
