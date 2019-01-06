@@ -6,6 +6,7 @@ target 'tK Fan' do
   use_frameworks!
   pod 'ReachabilitySwift'
   pod 'RealmSwift'
+  pod 'FittedSheets'
   # Pods for tK Fan
 
 end
