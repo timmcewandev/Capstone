@@ -5,6 +5,7 @@
 import Foundation
 import UIKit
 import TwitterKit
+
 var Directors = [Members]()
 var Streamers = [Members]()
 var COD = [Members]()
@@ -12,32 +13,33 @@ var creatives = [Members]()
 var Management = [Members]()
 var rowSections = [Directors.count, Streamers.count, creatives.count, Management.count, COD.count]
 var members = [Members]()
+
 class RostersTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var sections = ["DIRECTORS","STREAMERS","CREATIVES","MANAGERS","CALL OF DUTY" ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadCOD()
+      
         loadCreators()
         
         filterList()
+      
         streamersLoad()
+      
         loadDirectors()
-        print(Directors.count)
-        print(rowSections)
     }
     // MARK: - Beginning of Directors
     func loadDirectors() {
         
         let sharp = Members(name: "sharp tK",twitterNickname: "Sharp_tK", altName: "SHARPISHA", altPosition: "YOUTUBER/VLOGGER", job: "", twitter: "Sharp_tK", twitterapp: "Sharp_tK", twitch: "Sharp", twitchapp: "Sharp", instagram: "KaLiBeRSharp", instagramapp: "KaLiBeRSharp", snapchat: " ", snapchatapp: " ", youtube: "TheSharptube", youtubeINTRO: "yxCJfzMUUIA", youtubeapp: "TheSharptube")
         sharp.frontimage = UIImage(named: "sharpprofile")!
+      
         members.append(sharp)
         Streamers.append(sharp)
         Directors.append(sharp)
         let hammy = Members(name: "hamz",twitterNickname: "HAMIZMYNAME", altName: "UNCLE HAM", altPosition: "YOUTUBER/VLOGGER", job: "General Manager", twitter: "HAMIZMYNAME", twitterapp: "HAMIZMYNAME", twitch: "gtimabouttogoham", twitchapp: "gtimabouttogoham", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "GTimABOUTtogoHAM", youtubeINTRO: "BA8aF6todjc", youtubeapp: "GTimABOUTtogoHAM")
         hammy.frontimage = UIImage(named: "HAMZ")!
         Streamers.append(hammy)
-//        Management.append(hammy)
         Directors.append(hammy)
         members.append(hammy)
         
@@ -176,36 +178,31 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         
         let theory = Members(name: "theory tK", twitterNickname: "Theory_tK", altName: "Theory", altPosition: "", job: "Captain", twitter: "Theory_tK", twitterapp: "Theory_tK", twitch: "TheoryCoD", twitchapp: "TheoryCoD", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: "e9d_xkmg1hs", youtubeapp: " ")
         theory.frontimage = UIImage(named: "Theory")!
-        //        theory.longimage = UIImage(named: "theoryhero")!
         members.append(theory)
         Streamers.append(theory)
         COD.append(theory)
-        
     }
     
-    func filterList() { // should probably be called sort and not filter
+    func filterList() {
         Directors.sort() { $1.name > $0.name }
-        
     }
-    func streamersList() { // should probably be called sort and not filter
+  
+    func streamersList() {
         Streamers.sort() { $1.name > $0.name }
-        
     }
-    func creativesList() { // should probably be called sort and not filter
+  
+    func creativesList() {
         creatives.sort() { $1.name > $0.name }
-        
     }
-    func manageList() { // should probably be called sort and not filter
+  
+    func manageList() {
         Management.sort() { $1.name > $0.name }
-        
     }
-    func codList() { // should probably be called sort and not filter
+  
+    func codList() {
         COD.sort() { $1.name > $0.name }
-        
     }
-    
-    
-    // ROWS
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         var num_rows:Int = 0
         
@@ -229,7 +226,6 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
             break
         }
         return num_rows
-        
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -256,55 +252,40 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         }
         return cell
     }
-    
-    // END OF ROWS
-    // SECTIONS
+
     public func numberOfSections(in tableView: UITableView) -> Int{
-      
         return sections.count
     }
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
-      
         return sections[section]
     }
-    
-    //END OF SECTIONS
+
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
         view.tintColor = UIColor(red: 44/255.0, green: 55/255.0, blue: 75/255.0, alpha: 1.0)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
     }
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch (indexPath.section) {
         case 0:
-            let member = Directors[(indexPath as NSIndexPath).row]
-            
-            self.performSegue(withIdentifier: "MemberSegue", sender: member)
-            
+            let director = Directors[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "MemberSegue", sender: director)
         case 1:
-            let killer = Streamers[(indexPath as NSIndexPath).row]
-            
-            
-            self.performSegue(withIdentifier: "MemberSegue", sender: killer)
-            
+            let streamers = Streamers[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "MemberSegue", sender: streamers)
         case 2:
-            let Hello = creatives[(indexPath as NSIndexPath).row]
-            
-            
-            self.performSegue(withIdentifier: "MemberSegue", sender: Hello)
+            let create = creatives[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "MemberSegue", sender: create)
         case 3:
-            let World = Management[(indexPath as NSIndexPath).row]
-            
-            
-            self.performSegue(withIdentifier: "MemberSegue", sender: World)
+            let management = Management[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "MemberSegue", sender: management)
         case 4:
-            let Mike = COD[(indexPath as NSIndexPath).row]
-            
-            
-            self.performSegue(withIdentifier: "MemberSegue", sender: Mike)
+            let cod = COD[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "MemberSegue", sender: cod)
         default:
             break
             
@@ -315,7 +296,6 @@ class RostersTableViewController: UIViewController, UITableViewDataSource, UITab
         
         let ControlME2 = segue.destination as! profileViewController
         ControlME2.member = sender as! Members
-
     }
 
     override var prefersStatusBarHidden: Bool {
