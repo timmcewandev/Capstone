@@ -1,7 +1,5 @@
-//
 //  Streamers.swift
-//  tK Fan
-//
+
 import UIKit
 
 class Members {
@@ -23,10 +21,7 @@ class Members {
     var youtubeINTRO:String = ""
     var youtubeapp:String = ""
     var frontimage = UIImage()
-
-    
-    
-    
+  
     init(name:String = "",twitterNickname:String = "", altName:String = "", altPosition:String = "", job:String = "", twitter:String = "", twitterapp: String = "", twitch: String = "", twitchapp: String = "", instagram: String = "", instagramapp: String = "", snapchat:String = "", snapchatapp: String = "", youtube: String = "", youtubeINTRO:String = "", youtubeapp:String = "") {
         self.name = name
         self.twitterNickname = twitterNickname
@@ -109,8 +104,7 @@ class Members {
         crispy.frontimage = UIImage(named: "crispyprofile")!
         return crispy
     }
-    
-    
+  
     class func andimgone () -> Members {
         let andimgone = Members(name: "gone tK", twitterNickname: "AND_IM_GONE", altName: "Gone", altPosition: "YOUTUBER/STREAMER", job: " ", twitter: "AND_IM_GONE", twitterapp: "AND_IM_GONE", twitch: "GONE", twitchapp: "GONE", instagram: "ANDIMGONE1", instagramapp: "ANDIMGONE1", snapchat: " ", snapchatapp: " ", youtube: "GONE", youtubeINTRO: "3FapVXPTrdE", youtubeapp: "GONE")
         andimgone.frontimage = UIImage(named: "goneProfile")!
@@ -122,19 +116,17 @@ class Members {
     lostinplace.frontimage = UIImage(named: "Lost")!
     return lostinplace
     }
-    
-//    TODO TEDDY
-    
+  
     class func crazyteddy () -> Members {
         let crazyteddy = Members(name: "teddy tK", twitterNickname: "iCrazyTeddy", altName: "iCrazyTeddy", altPosition: "YOUTUBER", job: "Streamer/director", twitter: "iCrazyTeddy", twitterapp: "iCrazyTeddy", twitch: "icrazyteddy", twitchapp: "icrazyteddy", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "iCrazyTeddy", youtubeINTRO: "5rGRi-iZLHo", youtubeapp: "iCrazyTeddy")
         crazyteddy.frontimage = UIImage(named: "Teddy")!
-return crazyteddy
-        
+      return crazyteddy
     }
+  
     class func fooya () -> Members {
         let fooya = Members(name: "fooya tK", twitterNickname: "iFooYa", altName: "Fooya", altPosition: "STREAMER/YOUTUBER", job: "Streamer", twitter: "iFooYa", twitterapp: "iFooYa", twitch: "fooya", twitchapp: "fooya", instagram: "FOOYA", instagramapp: "FOOYA", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: " ", youtubeapp: " ")
     fooya.frontimage = UIImage(named: "Fooya")!
-return fooya
+      return fooya
     }
     
     class func laggin () -> Members {
@@ -142,20 +134,16 @@ return fooya
         laggin.frontimage = UIImage(named: "Laggin")!
         return laggin
     }
-    
-    
+  
     class func kb () -> Members {
         let kb = Members(name: "kb tK", twitterNickname: "KBPRESTIEGE", altName: "KB", altPosition: "COMEDY VIDEOS", job: "Comedy Videos", twitter: "KBPRESTIEGE", twitterapp: "KBPRESTIEGE", twitch: "KNGBLZ", twitchapp: "KNGBLZ", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "KNGBLZ", youtubeINTRO: "1AsAk3GNFwY", youtubeapp: "KNGBLZ")
         kb.frontimage = UIImage(named: "KB")!
-
         return kb
     }
     
     class func cin () -> Members {
         let cin = Members(name: "Cin tK", twitterNickname: "CinCinBear", altName: "Cin tK", altPosition: "COMEDY VIDEOS", job: "", twitter: "CinCinBear", twitterapp: "CinCinBear", twitch: "cincinbear", twitchapp: "cincinbear", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "cincinbeartv", youtubeINTRO: "QIRu2Gkv66A", youtubeapp: "cincinbeartv")
         cin.frontimage = UIImage(named: "Cin")!
-
-        
         return cin
     }
     
@@ -168,7 +156,6 @@ return ava
     class func adrive () -> Members {
         let adrive = Members(name: "adrive tK", twitterNickname: "aDrive_tK", altName: "ava tK", altPosition: "Twitch streamer", job: "", twitter: "aDrive_tK", twitterapp: "aDrive_tK", twitch: "adrive", twitchapp: "adrive", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "xaDr1v3", youtubeINTRO: "d7wnwvMLJM8", youtubeapp: "xaDr1v3")
         adrive.frontimage = UIImage(named: "Adrive")!
-
         return adrive
     }
     
@@ -181,7 +168,6 @@ return ava
     class func joshtk () -> Members {
         let joshtk = Members(name: "josh tK",  twitterNickname: "DubaloDesign", altName: "Josh tK", altPosition: "Designer", job: "Graphic Designer", twitter: "DubaloDesign", twitterapp: "DubaloDesign", twitch: " ", twitchapp: " ", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "dubalogaming", youtubeINTRO: "ogOKyZIWU0U", youtubeapp: "dubalogaming")
         joshtk.frontimage = UIImage(named: "JoshTK")!
-
         return joshtk
     }
 
@@ -194,7 +180,6 @@ return legenda
     class func vimzo () -> Members {
         let vimzo = Members(name: "vimzo tK", job: "Graphic Designer", twitter: "VimZo", twitterapp: "VimZo", twitch: " ", twitchapp: " ", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "KaliberCreative", youtubeINTRO: " ", youtubeapp: "KaliberCreative")
         vimzo.frontimage = UIImage(named: "Vimzo")!
-        
         return vimzo
     }
     
@@ -204,58 +189,34 @@ return legenda
     aborted.frontimage = UIImage(named: "aborted")!
     return aborted
     }
-    
-    
+  
     class func faex () -> Members {
         let faex = Members(name: "faex tK", twitterNickname: "faex tK", altName: "Faex", altPosition: "Designer", job: "3D Artist/Animator", twitter: "FaexEditing", twitterapp: "FaexEditing", twitch: " ", twitchapp: " ", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: "KaliberCreative", youtubeINTRO: " ", youtubeapp: "KaliberCreative")
         faex.frontimage = UIImage(named: "FAEX")!
-
         return faex
     }
     
     class func samurai () -> Members {
         let samurai = Members(name: "samurai tK", twitterNickname: "smriii", altName: "Samurai", altPosition: "CDO", job: " ", twitter: "smriii", twitterapp: "Samurai_tK", twitch: "xsmri", twitchapp: "xsmri" , instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: "NONE", youtube: "xSMRI", youtubeINTRO: "CScl2ESFAA0", youtubeapp: "xSMRI")
         samurai.frontimage = UIImage(named: "samuraipro")!
-
-        
         return samurai
     }
-    
-    
-    
+  
     class func happy () -> Members {
         let happy = Members(name: "happy tK", twitterNickname: "OpSuda", altName: "Happy", altPosition: "", job: "COD: Player", twitter: "OpSuda", twitterapp: "OpSuda", twitch: "opsuda", twitchapp: "opsuda", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: " ", youtubeapp: " ")
         happy.frontimage = UIImage(named: "Happy")!
-
-        
-        
         return happy
     }
-    
-    
+  
     class func goonjar () -> Members {
         let goonjar = Members(name: "goonjar tK", twitterNickname: "Goonjar", altName: "Goon", altPosition: "", job: "COD: Player", twitter: "Goonjar", twitterapp: "Goonjar", twitch: "goonjar", twitchapp: "goonjar", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: "e9d_xkmg1hs", youtubeapp: " ")
         goonjar.frontimage = UIImage(named: "Goonjar")!
-        
-        
-        
         return goonjar
     }
-    
-    
+  
     class func theory () -> Members {
         let theory = Members(name: "theory tK", twitterNickname: "Theory_tK", altName: "Theory", altPosition: "", job: "Captain", twitter: "Theory_tK", twitterapp: "Theory_tK", twitch: "TheoryCoD", twitchapp: "TheoryCoD", instagram: " ", instagramapp: " ", snapchat: " ", snapchatapp: " ", youtube: " ", youtubeINTRO: "e9d_xkmg1hs", youtubeapp: " ")
         theory.frontimage = UIImage(named: "Theory")!
-
-        
-        
-        
         return theory
     }
-    
-    
-    
-    
-    
-    
 }

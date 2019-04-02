@@ -22,27 +22,27 @@ class memberYoutubeViewController: UIViewController {
     webView.loadRequest( URLRequest(url: youtubeURL) )
   }
   override func viewWillAppear(_ animated: Bool) {
-
-      
-      let reachability = Reachability()!
-      reachability.whenUnreachable = { _ in
-        let alert = UIAlertController(title: "😭", message: "Don't hate us because your internet doesn't work -- Please reconnect device to internet ", preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when){
-          alert.dismiss(animated: true, completion: nil)
-        }
+    
+    
+    let reachability = Reachability()!
+    reachability.whenUnreachable = { _ in
+      let alert = UIAlertController(title: "😭", message: "Don't hate us because your internet doesn't work -- Please reconnect device to internet ", preferredStyle: .alert)
+      self.present(alert, animated: true, completion: nil)
+      let when = DispatchTime.now() + 2
+      DispatchQueue.main.asyncAfter(deadline: when){
+        alert.dismiss(animated: true, completion: nil)
       }
-      do {
-        try reachability.startNotifier()
-      } catch {
-        print("Unable to start notifier")
-      }
+    }
+    do {
+      try reachability.startNotifier()
+    } catch {
+      print("Unable to start notifier")
+    }
     view.addSubview(activityIndicator)
     activityIndicator.frame = view.bounds
     activityIndicator.startAnimating()
     
-  
+    
   }
   override func viewDidLoad() {
     
