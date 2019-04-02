@@ -41,8 +41,6 @@ class memberYoutubeViewController: UIViewController {
     view.addSubview(activityIndicator)
     activityIndicator.frame = view.bounds
     activityIndicator.startAnimating()
-    
-    
   }
   override func viewDidLoad() {
     

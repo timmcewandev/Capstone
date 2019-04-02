@@ -27,59 +27,72 @@ class profileViewController: UIViewController  {
   @IBOutlet weak var PlusSignature: UIBarButtonItem!
   var member = Members()
   
-  @IBOutlet weak var labelOUT: UILabel!
-  @IBOutlet weak var popupNOW: UIView!
-  @IBOutlet weak var job: UILabel!
-  @IBOutlet weak var tweetView: UIView!
-  @IBOutlet weak var LiveNOWOUTLET: UIButton!
-  @IBOutlet weak var profilepicture: UIImageView!
-  @IBOutlet weak var heroimage: UIImageView!
-  @IBOutlet weak var longimage: UIImageView!
-  @IBOutlet weak var youtuberect: UIImageView!
-  @IBOutlet weak var BackgroundHeroImage: UIImageView!
-  @IBOutlet weak var wv: UIWebView!
-  @IBOutlet weak var NAMEOUTLET: UILabel!
+  @IBOutlet var labelOUT: UILabel!
+  @IBOutlet var popupNOW: UIView!
+  @IBOutlet var job: UILabel!
+  @IBOutlet var tweetView: UIView!
+  @IBOutlet var LiveNOWOUTLET: UIButton!
+  @IBOutlet var profilepicture: UIImageView!
+  @IBOutlet var heroimage: UIImageView!
+  @IBOutlet var longimage: UIImageView!
+  @IBOutlet var youtuberect: UIImageView!
+  @IBOutlet var BackgroundHeroImage: UIImageView!
+  @IBOutlet var wv: UIWebView!
+  @IBOutlet var NAMEOUTLET: UILabel!
   // MARK: - Social Handles
-  @IBOutlet weak var twitch: UIButton!
-  @IBOutlet weak var youtube: UIButton!
-  @IBOutlet weak var twitter: UIButton!
-  @IBOutlet weak var instagram: UIButton!
-  @IBOutlet weak var snapchat: UIButton!
-  @IBOutlet weak var jobOUTLET: UILabel!
-  @IBOutlet weak var vwToDisplayColor: UIView!
-  @IBOutlet weak var NavTitle: UINavigationBar!
-  @IBOutlet weak var segmentedControl: UISegmentedControl!
+  @IBOutlet var twitch: UIButton!
+  @IBOutlet var youtube: UIButton!
+  @IBOutlet var twitter: UIButton!
+  @IBOutlet var instagram: UIButton!
+  @IBOutlet var snapchat: UIButton!
+  @IBOutlet var jobOUTLET: UILabel!
+  @IBOutlet var vwToDisplayColor: UIView!
+  @IBOutlet var NavTitle: UINavigationBar!
+  @IBOutlet var segmentedControl: UISegmentedControl!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
     self.job.isHidden = self.member.job.contains("")
-    self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
-    self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
-    self.youtube.isHidden = self.member.youtube.contains("https://www.youtube.com/ ")
-    self.youtube.isHidden = self.member.youtubeapp.contains("youtube://www.youtube.com/ ")
-    self.twitter.isHidden = self.member.twitter.contains("https://twitter.com/ ")
-    self.twitter.isHidden = self.member.twitterapp.contains("twitter://user?screen_name= ")
-    self.instagram.isHidden = self.member.instagramapp.contains("instagram://user?username= ")
-    self.instagram.isHidden = self.member.instagram.contains("https://instagram.com/ ")
-    self.snapchat.isHidden = self.member.snapchat.contains("https://www.snapchat.com/add/ ")
-    self.profilepicture.image = self.member.frontimage
     
+    self.twitch.isHidden = self.member.twitch.contains("http://player.twitch.tv/?channel= ")
+    
+    self.twitch.isHidden = self.member.twitchapp.contains("twitch://stream/#channel_name ")
+    
+    self.youtube.isHidden = self.member.youtube.contains("https://www.youtube.com/ ")
+    
+    self.youtube.isHidden = self.member.youtubeapp.contains("youtube://www.youtube.com/ ")
+    
+    self.twitter.isHidden = self.member.twitter.contains("https://twitter.com/ ")
+    
+    self.twitter.isHidden = self.member.twitterapp.contains("twitter://user?screen_name= ")
+    
+    self.instagram.isHidden = self.member.instagramapp.contains("instagram://user?username= ")
+    
+    self.instagram.isHidden = self.member.instagram.contains("https://instagram.com/ ")
+    
+    self.snapchat.isHidden = self.member.snapchat.contains("https://www.snapchat.com/add/ ")
+    
+    self.profilepicture.image = self.member.frontimage
     self.jobOUTLET.text = self.member.altPosition
     self.job.text = self.member.job
+    
     if member.altName == " " {
       self.NavTitle.topItem?.title = self.member.name
-      
     } else {
       self.NavTitle.topItem?.title = self.member.altName
     }
+    
     self.navigationBarAppearace.backgroundColor = UIColor(red: 44/255.0, green: 55/255.0, blue: 75/255.0, alpha: 1.0)
+    
     self.view.backgroundColor = UIColor.white
     let twitterViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComponentA") as! TwitterMembers
     twitterViewController.member = self.member
     twitterViewController.view.translatesAutoresizingMaskIntoConstraints = false
+    
     self.addChildViewController(twitterViewController)
+    
     self.addSubview(subView: twitterViewController.view, toView:self.containerView!)
+    
     self.currentViewController = twitterViewController
   }
   
@@ -104,11 +117,9 @@ class profileViewController: UIViewController  {
     super.viewWillAppear(true)
     
     internetIsNotReachable()
-    
   }
   
   @IBAction func backButton(_ sender: UIBarButtonItem) {
-    
     dismiss(animated: true, completion: nil)
   }
   
@@ -118,11 +129,12 @@ class profileViewController: UIViewController  {
       let twitterViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComponentA") as! TwitterMembers
       twitterViewController.member = self.member
       twitterViewController.view.translatesAutoresizingMaskIntoConstraints = false
+      
       self.addChildViewController(twitterViewController)
       
       self.addSubview(subView: twitterViewController.view, toView:self.containerView!)
-      self.currentViewController = twitterViewController
       
+      self.currentViewController = twitterViewController
     } else {
       let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "ComponentB") as! memberYoutubeViewController
       newViewController.member = self.member
@@ -251,12 +263,8 @@ class profileViewController: UIViewController  {
     let url2 = NSURL(string: self.member.snapchatapp)!
     let url = NSURL(string: self.member.snapchat)!
     if UIApplication.shared.canOpenURL(url2 as URL){
-      
     }
-    //            IF THE TOP FAILS IT GOES TO THE BOTTOMS AND OPENS IN APP
     UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-    print("HELLO")
-    //redirect to safari because the user doesn't have Twitter
     UIApplication.shared.open(url2 as URL, options: [:], completionHandler: nil)
   }
   
@@ -338,7 +346,6 @@ class profileViewController: UIViewController  {
   }
   
   public func loadData() {
-    
     if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [MemberAdd] {
       self.store.memberAdd = ourData
     }
