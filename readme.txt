@@ -1,4 +1,4 @@
-
+This app was used for my Capstone project at BYUI
 
 			TEAM KALIBER APP
 The intended user experience in the app?
